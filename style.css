@@ -2,7 +2,7 @@ body{
     color: rgb(250, 252, 251);
 }
 body{
-background-color:#36804b ;
+background-color:#377e4b ;
 
 }
 body{
@@ -24,25 +24,69 @@ line: height 1.5;
 }
 
 nav {
-    background-color: #024905;
-    padding: 15px;
-    border-radius: 15px;
-}
-
-nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 25px;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+    margin: 20px auto 45px 10px;
+    padding: 8px;
+
+    background: #214f32;
+    border: 3px solid #d9c58b;
+    border-radius: 40px;
+
+    box-shadow: 0 5px 0 #173b25;
 }
 
 nav a {
+    position: relative;
+
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+
+    padding: 11px 18px;
+    border-radius: 30px;
+
+    transition: all 0.3s ease;
 }
 
+/* Leuchtender Alp-Effekt */
 nav a:hover {
-    color: #ffe680;
+    background: #d9c58b;
+    color: #214f32;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 0 #a8955d;
 }
+
+/* kleiner Schaf-Effekt */
+nav a:hover::after {
+    content: "🐑";
+    position: absolute;
+
+    right: -5px;
+    top: -25px;
+
+    font-size: 20px;
+
+    animation: schaf 0.5s ease;
+}
+
+@keyframes schaf {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
