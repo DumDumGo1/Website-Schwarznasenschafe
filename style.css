@@ -23,71 +23,115 @@ line: height 1.5;
     border-radius: 8px;
 }
 nav {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    margin: 25px 0 45px 25px;
+    padding: 15px 25px;
+
+    background-color: #245c38;
+    border: 3px solid #d8c98b;
+    border-radius: 35px;
 
     width: fit-content;
-    margin: 20px auto 45px 10px;
-    padding: 8px;
+}
 
-    background: #214f32;
-    border: 3px solid #d9c58b;
-    border-radius: 40px;
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
 
-    box-shadow: 0 5px 0 #173b25;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    position: relative;
+    list-style: none;
 }
 
 nav a {
     position: relative;
+    z-index: 2;
+
+    display: block;
+    padding: 12px 25px;
 
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 
-    padding: 11px 18px;
     border-radius: 30px;
-
-    transition: all 0.3s ease;
 }
 
-/* Leuchtender Alp-Effekt */
-nav a:hover {
-    background: #d9c58b;
-    color: #214f32;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 0 #a8955d;
-}
-
-/* kleiner Schaf-Effekt */
-nav a:hover::after {
-    content: "🐑";
+/* GROSSE BLUBBERBLASE */
+nav li:hover::after {
+    content: "";
     position: absolute;
+    z-index: 1;
 
-    right: -5px;
+    width: 145px;
+    height: 75px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(255, 255, 255, 0.25);
+    border: 3px solid #d8c98b;
+    border-radius: 50%;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    animation: blubbern 0.5s ease;
+}
+
+/* VERSCHIEDENE EMOJIS */
+nav li:nth-child(1):hover::before {
+    content: "🏠";
+}
+
+nav li:nth-child(2):hover::before {
+    content: "🐑";
+}
+
+nav li:nth-child(3):hover::before {
+    content: "📸";
+}
+
+nav li:hover::before {
+    position: absolute;
+    z-index: 3;
+
+    left: 50%;
     top: -25px;
 
-    font-size: 20px;
+    transform: translateX(-50%);
 
-    animation: schaf 0.5s ease;
+    font-size: 27px;
+
+    animation: emoji 0.4s ease;
 }
 
-@keyframes schaf {
-    0% {
-        transform: translateX(-10px);
+@keyframes blubbern {
+    from {
+        transform: translate(-50%, -50%) scale(0.7);
         opacity: 0;
     }
 
-    100% {
-        transform: translateX(0);
+    to {
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
 }
 
+@keyframes emoji {
+    from {
+        transform: translateX(-50%) scale(0.5);
+    }
 
-
-
-
-
-
+    to {
+        transform: translateX(-50%) scale(1);
+    }
+}
