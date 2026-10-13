@@ -127,7 +127,8 @@ nav a:hover {
 }
   
 .site-header{
-
+    padding: 16px 0 ;
+    border-bottom: 1px solid rgb(204, 187, 111);
 }
 
 .site-nav{
@@ -147,3 +148,6 @@ nav a:hover {
 
 }
 
+.brand{
+
+}
