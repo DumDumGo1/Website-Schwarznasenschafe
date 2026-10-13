@@ -132,7 +132,7 @@ nav a:hover {
 }
 
 .site-nav{
-     border-bottom: 1px solid rgb(204, 187, 111);
+     border-bottom: 2px solid rgb(204, 187, 111);
     margin: 30px
 }
     
@@ -145,7 +145,8 @@ nav a:hover {
 }
 
 .site-footer{
-
+    padding: 16px 0;
+    border-top: 1px solid rgb(204, 187, 111);
 }
 
 .section{
