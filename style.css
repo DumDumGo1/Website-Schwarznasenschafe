@@ -133,7 +133,7 @@ nav a:hover {
 
 .site-nav{
      border-bottom: 2px solid rgb(204, 187, 111);
-    margin: 30px
+    margin: 8px 0 0 30px
 }
     
 
@@ -156,4 +156,9 @@ nav a:hover {
 
 .brand{
     font-weight: 700;
+}
+
+h1, h2, h3{
+    line-height: 1.2;
+    margin: 0 0 8px 0;
 }
