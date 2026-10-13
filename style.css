@@ -125,8 +125,25 @@ nav li:nth-child(3):hover::before {
 nav a:hover {
     color: #fff8d9;
 }
+  
+.site-header{
+
+}
 
 .site-nav{
     margin: 30px;
 
 }
+
+.site-main{
+
+}
+
+.site-footer{
+
+}
+
+.section{
+
+}
+
