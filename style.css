@@ -173,7 +173,7 @@ p{
 }
 
 .card{
-    border: 1px solid rgb(248, 246, 108);
+    border: 2px solid rgb(204, 178, 111);
     border-radius: 12px;
     padding: 12px;
 }
