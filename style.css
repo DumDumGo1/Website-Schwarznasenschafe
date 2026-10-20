@@ -1,11 +1,10 @@
 body {
     color: rgb(250, 252, 251);
-    background-color: #42985b;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
 body{
-background-color:#42985b ;
+background-color:#06402B;
 
 }
 body{
@@ -43,7 +42,7 @@ nav {
     width: fit-content;
     margin: 8px 0 20px;
     padding: 2px 5px;
-    background: #205333;
+    background: #588d50;
     border: 2px solid #d9c783;
     border-radius: 25px;
 }
