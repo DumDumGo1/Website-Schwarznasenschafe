@@ -166,20 +166,24 @@ p{
 }
 
 
-.cards{
-  display: grid;
-  gap: 12px;
-  margin-top: 12px;
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 12px;
 }
 
-.card{
+.card {
+    box-sizing: border-box;
+    min-width: 0;
     border: 2px solid rgb(204, 178, 111);
     border-radius: 12px;
-    padding: 12px;
+    padding: 16px;
+    overflow-wrap: anywhere;
 }
 
-@media (min-width: 700px){
-    .cards{
-        grid-template-columns: repeat(2,1fr);
+@media (min-width: 700px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
