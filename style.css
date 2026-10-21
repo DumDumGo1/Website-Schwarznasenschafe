@@ -189,3 +189,11 @@ p{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+ 
