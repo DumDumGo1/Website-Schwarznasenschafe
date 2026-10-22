@@ -3,17 +3,6 @@ console.log(JavaScript läuft);
 
 
 
-document.querySelectorAll("main p, main h2, main h3").forEach(text => {
-    text.addEventListener("click", () => {
-        text.style.transform = "scale(1.05)";
-        setTimeout(() => {
-            text.style.transform = "scale(1)";
-        }, 300);
-    });
-});
-
-
-
 
 
 // 🐑 Schaf-Mauszeiger
