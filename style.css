@@ -201,21 +201,3 @@ p{
 
 
 
-.schaf-glitzer {
-    text-align: center;
-    font-size: 35px;
-    padding: 20px;
-    animation: schafleuchten 2s infinite alternate;
-}
-
-@keyframes schafleuchten {
-    from {
-        opacity: 0.5;
-        transform: scale(1);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1.12);
-        filter: drop-shadow(0 0 10px #a5d6a7);
-    }
-}
