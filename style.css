@@ -202,3 +202,27 @@ p{
 
 
 
+
+/* Magisches Schaf */
+
+.schaf-zauber {
+    text-align: center;
+    font-size: 55px;
+    padding: 20px;
+    cursor: pointer;
+    animation: schaf-schweben 2s ease-in-out infinite;
+}
+
+.schaf-zauber:hover {
+    filter: drop-shadow(0 0 15px gold);
+    transform: scale(1.2);
+}
+
+@keyframes schaf-schweben {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
