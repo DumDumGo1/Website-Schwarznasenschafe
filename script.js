@@ -1,6 +1,4 @@
-console.log(JavaScript läuft);
-
-
+console.log("JavaScript läuft");
 
 
 
@@ -22,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("mousemove", function (e) {
         sheep.style.display = "block";
-        sheep.style.left = e.clientX + "px";
-        sheep.style.top = e.clientY + "px";
+        sheep.style.left = (e.clientX + 5) + "px";
+        sheep.style.top = (e.clientY + 5) + "px";
     });
 
     document.addEventListener("mousedown", function () {
