@@ -206,25 +206,3 @@ p{
 
 
 
-main p,
-main h1,
-main h2,
-main h3,
-main li {
-    transition: transform 0.2s ease;
-}
-
-main p:hover,
-main h1:hover,
-main h2:hover,
-main h3:hover,
-main li:hover {
-    transform: scale(1.03);
-}
-
-
-.card {
-    padding: 15px;
-    margin: 10px;
-    font-size: 15px;
-}
