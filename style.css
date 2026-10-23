@@ -191,7 +191,7 @@ p{
 }
 
 .responsive-img {
-    max-width: 100%;
+    max-width: 95%;
     height: auto;
     display: block;
     border-radius: 12px;
