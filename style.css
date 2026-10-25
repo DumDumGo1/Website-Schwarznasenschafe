@@ -232,15 +232,15 @@ p{
 /* Bilderraster */
 .bilder-raster {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 
-/* Nur die Bilder im Raster */
+/* Bilder etwas grösser */
 .bilder-raster img {
     width: 100%;
-    height: 200px;
+    height: 280px;
     object-fit: cover;
     border-radius: 12px;
     display: block;
@@ -250,11 +250,10 @@ p{
 @media (max-width: 600px) {
     .bilder-raster {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
+        gap: 10px;
     }
 
     .bilder-raster img {
-        height: 140px;
+        height: 180px;
     }
 }
-```
