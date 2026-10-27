@@ -123,3 +123,87 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 5000);
     });
 });
+
+
+
+
+
+/*Rainbow*/
+
+
+/* 🌈 GEHEIMES EASTER EGG: SCHAF-REGENBOGEN */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const titel = document.querySelector("h1");
+    if (!titel) return;
+
+    let klicks = 0;
+    let timer;
+
+    titel.style.cursor = "pointer";
+
+    titel.addEventListener("click", function () {
+        klicks++;
+
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            klicks = 0;
+        }, 2000);
+
+        if (klicks >= 5) {
+            klicks = 0;
+
+            let magie = document.getElementById("schaf-regenbogen");
+
+            if (magie) magie.remove();
+
+            magie = document.createElement("div");
+            magie.id = "schaf-regenbogen";
+
+            magie.style.cssText = `
+                position: fixed;
+                inset: 0;
+                z-index: 100000;
+                pointer-events: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: linear-gradient(
+                    135deg,
+                    rgba(255, 100, 180, 0.65),
+                    rgba(255, 220, 80, 0.65),
+                    rgba(80, 220, 150, 0.65),
+                    rgba(100, 160, 255, 0.65),
+                    rgba(180, 100, 255, 0.65)
+                );
+                opacity: 0;
+                transition: opacity 0.8s;
+            `;
+
+            magie.innerHTML = `
+                <div style="font-size:90px">🌈</div>
+                <div style="font-size:35px;font-weight:bold;color:white;text-align:center;text-shadow:2px 2px 5px #333">
+                    MÄÄÄÄÄH!!!
+                </div>
+                <div style="font-size:45px;margin-top:20px">
+                    🐑 ✨ 🐑 🌟 🐑
+                </div>
+            `;
+
+            document.body.appendChild(magie);
+
+            requestAnimationFrame(function () {
+                magie.style.opacity = "1";
+            });
+
+            setTimeout(function () {
+                magie.style.opacity = "0";
+
+                setTimeout(function () {
+                    magie.remove();
+                }, 900);
+            }, 5000);
+        }
+    });
+});
