@@ -40,8 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
+/*Chaos Herde*/
 
 document.addEventListener("DOMContentLoaded", function () {
     const magischesSchaf = document.querySelector(".schaf-zauber");
