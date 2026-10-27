@@ -274,3 +274,123 @@ p{
 }
 
 
+
+
+/* 🌿 ALPEN-FARBVERLAUF */
+
+body {
+    background: linear-gradient(
+        180deg,
+        #123b2b 0%,
+        #176044 45%,
+        #34724a 75%,
+        #557541 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* 🐑 ANIMIERTER HINTERGRUND */
+
+#schaf-wiese {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Deine Website bleibt vor den Animationen */
+
+.site-header,
+.site-nav,
+.site-main,
+.site-footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* 🐑 SCHWARZE SCHAF-SILHOUETTEN */
+
+.laufendes-schaf {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    width: 75px;
+    height: 55px;
+    animation-name: schaf-laufen;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+
+.laufendes-schaf svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Schafe laufen über den ganzen Bildschirm */
+
+@keyframes schaf-laufen {
+    from {
+        transform: translateX(-100px);
+    }
+
+    to {
+        transform: translateX(calc(100vw + 100px));
+    }
+}
+
+/* 🌼 BLUMEN, DIE AUFBLÜHEN UND VERWELKEN */
+
+.hintergrund-blume {
+    position: absolute;
+    bottom: 5%;
+    font-size: 27px;
+    opacity: 0;
+    transform: scale(0.1) rotate(-25deg);
+    transform-origin: bottom center;
+    animation: blume-blueht 6s ease-in-out infinite;
+}
+
+@keyframes blume-blueht {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.1) rotate(-25deg);
+        filter: saturate(0.4);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        filter: saturate(1.2);
+    }
+
+    55% {
+        opacity: 1;
+        transform: scale(1.1) rotate(5deg);
+        filter: saturate(1);
+    }
+
+    80% {
+        opacity: 0.5;
+        transform: scale(0.75) rotate(20deg);
+        filter: saturate(0.5);
+    }
+}
+
+/* 📱 Handy */
+
+@media (max-width: 600px) {
+    .laufendes-schaf {
+        width: 52px;
+        height: 40px;
+    }
+
+    .hintergrund-blume {
+        font-size: 21px;
+    }
+}
