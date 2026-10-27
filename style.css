@@ -184,6 +184,20 @@ p{
     overflow-wrap: anywhere;
 }
 
+.hero{
+    display: grid;
+    gap: 12px;
+    margin-top: 12px;
+
+}
+
+.hero-card{
+    border: 1px solid  rgb(204, 178, 111) ;
+    border-radius: 12px;
+    padding: 12px;
+    background: #588d50;
+}
+
 @media (min-width: 700px) {
     .cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
