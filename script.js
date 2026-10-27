@@ -128,9 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-/*Rainbow*/
-
-
 /* 🌈 GEHEIMES EASTER EGG: SCHAF-REGENBOGEN */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -184,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
             magie.innerHTML = `
                 <div style="font-size:90px">🌈</div>
                 <div style="font-size:35px;font-weight:bold;color:white;text-align:center;text-shadow:2px 2px 5px #333">
-                    MÄÄÄÄÄH!!!
+                  MÄÄÄÄÄÄH!
                 </div>
                 <div style="font-size:45px;margin-top:20px">
                     🐑 ✨ 🐑 🌟 🐑
@@ -207,3 +204,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
