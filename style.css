@@ -202,10 +202,7 @@ p{
     .cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .hero{
-        grid-template-columns: 1.3fr 1fr;
-        align-items: start;
-    }
+    
 }
 
 .responsive-img {
