@@ -445,61 +445,85 @@ body {
 
 
 
-.schaf-portal {
+
+/* Kleines Fenster unten rechts */
+#schaf-geheim-knopf {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 9999;
-}
+    z-index: 9998;
 
-.schaf-portal summary {
-    cursor: pointer;
-    background: #06402B;
+    background: linear-gradient(135deg, #06402B, #42985b);
     color: white;
-    padding: 15px;
     border: 2px solid #d9c783;
-    border-radius: 20px;
-    list-style: none;
+    border-radius: 18px;
+    padding: 13px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px #0005;
+    transition: 0.3s;
 }
 
-.portal-inhalt {
+#schaf-geheim-knopf:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #d9c783;
+}
+
+/* Grosses Portal */
+#schaf-geheimnis {
+    display: none;
     position: fixed;
-    inset: 15%;
-    background: linear-gradient(135deg, #d9edc5, #fff5cf);
-    color: #06402B;
-    border: 5px solid #d9c783;
-    border-radius: 25px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 0 0 100vmax #000b;
-    display: flex;
-    flex-direction: column;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 30, 15, 0.92);
     justify-content: center;
-    animation: portalAuf 0.5s ease;
+    align-items: center;
 }
 
-.portal-schafe {
+.geheimnis-inhalt {
+    position: relative;
+    background: linear-gradient(135deg, #d9edc5, #fff5cf);
+    color: #16472b;
+    padding: 35px;
+    border: 5px solid #c9a94e;
+    border-radius: 25px;
+    text-align: center;
+    width: 80%;
+    max-width: 550px;
+    animation: portalErscheinen 0.7s ease;
+}
+
+#geheimnis-schliessen {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: #16472b;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 13px;
+    cursor: pointer;
+}
+
+.geheimnis-schafe {
     font-size: 35px;
-    animation: schafHopp 1s infinite alternate;
+    margin: 25px 0;
+    animation: schafHuepfen 1s infinite alternate;
 }
 
-@keyframes portalAuf {
+@keyframes portalErscheinen {
     from {
-        transform: scale(0.2);
+        transform: scale(0.3) rotate(-10deg);
         opacity: 0;
     }
     to {
-        transform: scale(1);
+        transform: scale(1) rotate(0);
         opacity: 1;
     }
 }
 
-@keyframes schafHopp {
+@keyframes schafHuepfen {
     to {
         transform: translateY(-12px);
     }
-}
-
-.schaf-portal[open] summary {
-    display: none;
 }

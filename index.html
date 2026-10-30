@@ -10,19 +10,41 @@
 
 
 
+<!-- Kleines geheimes Fenster -->
+<button id="schaf-geheim-knopf">
+    🏆 Pssst... Geheimnis!
+</button>
+
+<!-- Grosses Schaf-Portal -->
+<div id="schaf-geheimnis">
+    <div class="geheimnis-inhalt">
+        <button id="geheimnis-schliessen">✖</button>
+
+        <h2>🏆🐑 GEHEIME SCHAF-WELT 🐑</h2>
+        <p>Du hast das geheime Portal entdeckt!</p>
+
+        <div class="geheimnis-schafe">
+            🐑 🌸 🐑 ✨ 🐑 🌼 🐑
+        </div>
+
+        <p>MÄÄÄH! Der Pokal gehört jetzt den Schafen!</p>
+    </div>
+</div>
+
 <script>
-let schafKlicks = 0;
+const geheimKnopf = document.getElementById("schaf-geheim-knopf");
+const geheimnis = document.getElementById("schaf-geheimnis");
+const schliessen = document.getElementById("geheimnis-schliessen");
 
-document.querySelector(".schaf-zauber").addEventListener("click", function() {
-    schafKlicks++;
+geheimKnopf.addEventListener("click", function() {
+    geheimnis.style.display = "flex";
+});
 
-    if (schafKlicks === 10) {
-        alert("🐑✨ MÄÄÄH! Du hast das geheime Schaf-Geheimnis entdeckt!");
-        document.body.style.background = "linear-gradient(135deg, #b7e4a5, #fff2c6)";
-        schafKlicks = 0;
-    }
+schliessen.addEventListener("click", function() {
+    geheimnis.style.display = "none";
 });
 </script>
+
 
 
 
