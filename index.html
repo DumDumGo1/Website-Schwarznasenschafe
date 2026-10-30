@@ -9,6 +9,23 @@
 </head>
 
 
+
+<script>
+let schafKlicks = 0;
+
+document.querySelector(".schaf-zauber").addEventListener("click", function() {
+    schafKlicks++;
+
+    if (schafKlicks === 10) {
+        alert("🐑✨ MÄÄÄH! Du hast das geheime Schaf-Geheimnis entdeckt!");
+        document.body.style.background = "linear-gradient(135deg, #b7e4a5, #fff2c6)";
+        schafKlicks = 0;
+    }
+});
+</script>
+
+
+
 <body>
 
     <div id="schaf-wiese"></div>
@@ -165,6 +182,9 @@
     </footer>
     
 <div class="schaf-zauber">🐑 ✨</div>
+</button>
+
+<audio id="schaf-ton" src="sounds/Sheep-bleating-sound.mp3"></audio>
 
 
     

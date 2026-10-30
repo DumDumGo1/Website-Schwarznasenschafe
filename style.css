@@ -445,7 +445,61 @@ body {
 
 
 
+.schaf-portal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
 
+.schaf-portal summary {
+    cursor: pointer;
+    background: #06402B;
+    color: white;
+    padding: 15px;
+    border: 2px solid #d9c783;
+    border-radius: 20px;
+    list-style: none;
+}
 
+.portal-inhalt {
+    position: fixed;
+    inset: 15%;
+    background: linear-gradient(135deg, #d9edc5, #fff5cf);
+    color: #06402B;
+    border: 5px solid #d9c783;
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 0 100vmax #000b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: portalAuf 0.5s ease;
+}
 
+.portal-schafe {
+    font-size: 35px;
+    animation: schafHopp 1s infinite alternate;
+}
 
+@keyframes portalAuf {
+    from {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes schafHopp {
+    to {
+        transform: translateY(-12px);
+    }
+}
+
+.schaf-portal[open] summary {
+    display: none;
+}
