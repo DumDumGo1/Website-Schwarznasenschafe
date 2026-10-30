@@ -49,7 +49,43 @@ schliessen.addEventListener("click", function() {
 
 
 
+<button id="verruecktes-schaf">🐑</button>
 
+<script>
+const schaf = document.getElementById("verruecktes-schaf");
+
+const verwandlungen = [
+    "🐑",
+    "🐉",
+    "🦖",
+    "🐸",
+    "👽",
+    "🍕",
+    "🦄",
+    "🐔",
+    "🐑"
+];
+
+let laeuft = false;
+
+schaf.addEventListener("click", function() {
+    if (laeuft) return;
+
+    laeuft = true;
+
+    let i = 0;
+
+    const durchlauf = setInterval(function() {
+        schaf.textContent = verwandlungen[i];
+        i++;
+
+        if (i >= verwandlungen.length) {
+            clearInterval(durchlauf);
+            laeuft = false;
+        }
+    }, 600);
+});
+</script>
 
 
 

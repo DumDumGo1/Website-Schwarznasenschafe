@@ -531,3 +531,18 @@ body {
 
 
 
+
+
+
+
+#verruecktes-schaf {
+    background: none;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#verruecktes-schaf:hover {
+    transform: rotate(20deg) scale(1.3);
+}
