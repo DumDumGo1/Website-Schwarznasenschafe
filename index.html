@@ -11,85 +11,6 @@
 
 
 
-<!-- Grosses Schaf-Portal -->
-<div id="schaf-geheimnis">
-    <div class="geheimnis-inhalt">
-        <button id="geheimnis-schliessen">✖</button>
-
-        <h2>🏆🐑 Das Schaf-Portal! 🐑</h2>
-        <p>Gragetsch. Kurz nach seiner Geburt starb seine Mutter. Es hatte deshalb einen besonders schwierigen Start ins Leben und entwickelte sich langsamer als andere Lämmer.
-
-Doch Gragetsch schaffte es! Es wurde zu einem ausgewachsenen Schwarznasenschaf und bekam später selbst Lämmer, um die es sich kümmerte. ❤️</p>
-    
-        <div class="geheimnis-schafe">
-            🐑 🌸 🐑 ✨ 🐑 🌼 🐑
-        </div>
-
-        <p>MÄÄÄH!</p>
-    </div>
-</div>
-
-<script>
-const geheimKnopf = document.getElementById("schaf-geheim-knopf");
-const geheimnis = document.getElementById("schaf-geheimnis");
-const schliessen = document.getElementById("geheimnis-schliessen");
-
-geheimKnopf.addEventListener("click", function() {
-    geheimnis.style.display = "flex";
-});
-
-schliessen.addEventListener("click", function() {
-    geheimnis.style.display = "none";
-});
-</script>
-
-
-
-<button id="verruecktes-schaf">🐑</button>
-
-<script>
-const schaf = document.getElementById("verruecktes-schaf");
-
-const verwandlungen = [
-    "🐑",
-    "🐉",
-    "🦖",
-    "🐸",
-    "👽",
-    "🍕",
-    "🦄",
-    "🐔",
-    "🐑"
-];
-
-let laeuft = false;
-
-schaf.addEventListener("click", function() {
-    if (laeuft) return;
-
-    laeuft = true;
-
-    let i = 0;
-
-    const durchlauf = setInterval(function() {
-        schaf.textContent = verwandlungen[i];
-        i++;
-
-        if (i >= verwandlungen.length) {
-            clearInterval(durchlauf);
-            laeuft = false;
-        }
-    }, 600);
-});
-</script>
-
-
-
-
-
-
-
-
 <body>
 
     <div id="schaf-wiese"></div>
@@ -245,30 +166,15 @@ schaf.addEventListener("click", function() {
              </div>
     </footer>
     
-<div class="magie-quiz-bereich">
 
-    <div class="schaf-zauber">🐑 ✨</div>
 
-    <div class="quiz-rechts">
-        <button id="quiz-knopf" onclick="quizStarten()">
-            🧠 Schaf-Quiz
-        </button>
 
-        <div id="quiz-fenster">
-            <button id="quiz-schliessen" onclick="quizSchliessen()">✖</button>
-            <div id="quiz-inhalt"></div>
-        </div>
-    </div>
+  <div class="schaf-zauber">🐑 ✨</div>
+  
+
+  
 
 </div>
-
-</div>
-
-<div id="quiz-fenster">
-    <button id="quiz-schliessen" onclick="quizSchliessen()">✖</button>
-    <div id="quiz-inhalt"></div>
-</div>
-    
     <script src="script.js"></script>
     
 </body>
