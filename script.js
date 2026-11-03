@@ -208,6 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
 const quizFragen = [
     {
         frage: "Aus welcher Region stammen Schwarznasenschafe?",
@@ -278,11 +280,12 @@ function quizStarten() {
     quizIndex = 0;
     quizPunkte = 0;
 
-    document.getElementById("quiz-fenster").style.display = "block";
+    const fenster = document.getElementById("quiz-fenster");
+
+    fenster.style.display = "block";
 
     quizAnzeigen();
 }
-
 function quizSchliessen() {
     document.getElementById("quiz-fenster").style.display = "none";
 }

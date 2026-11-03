@@ -563,12 +563,12 @@ body {
 
 /* Quiz-Knopf */
 #quiz-knopf {
-    padding: 13px 20px;
+    padding: 15px 20px;
     background: #d9c783;
     color: #123b2b;
     border: 2px solid #f3e5ad;
     border-radius: 15px;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
