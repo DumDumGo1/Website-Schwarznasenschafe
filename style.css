@@ -551,3 +551,95 @@ body {
 
 
 
+
+/* Magisches Schaf und Quiz nebeneinander */
+.magie-quiz-bereich {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+    margin: 30px 20px 15px;
+}
+
+/* Quiz-Knopf */
+#quiz-knopf {
+    padding: 13px 20px;
+    background: #d9c783;
+    color: #123b2b;
+    border: 2px solid #f3e5ad;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#quiz-knopf:hover {
+    transform: scale(1.08);
+    background: #f3e5ad;
+}
+
+/* Quiz-Fenster */
+#quiz-fenster {
+    display: none;
+    position: relative;
+    max-width: 430px;
+    margin: 10px 20px 30px;
+    padding: 35px 22px 22px;
+    background: #e9f0df;
+    color: #173b2b;
+    border: 3px solid #d9c783;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px #0005;
+}
+
+/* Schliessen-Kreuz */
+#quiz-schliessen {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: #245c3e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Antwort-Knöpfe */
+.quiz-antwort {
+    display: block;
+    width: 100%;
+    margin: 9px 0;
+    padding: 11px;
+    background: white;
+    color: #173b2b;
+    border: 2px solid #78966e;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.quiz-antwort:hover {
+    background: #dcebd3;
+}
+
+.quiz-antwort:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+/* Weiter-Knopf */
+#quiz-weiter {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #245c3e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
